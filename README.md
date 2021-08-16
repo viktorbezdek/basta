@@ -1,6 +1,6 @@
-# Basta
-[![npm](https://img.shields.io/npm/v/basta.svg?style=flat-square)](https://www.npmjs.com/package/basta)
-[![npm](https://img.shields.io/npm/l/basta.svg?style=flat-square)](https://www.npmjs.com/package/basta)
+# Rebasta
+[![npm](https://img.shields.io/npm/v/rebasta.svg?style=flat-square)](https://www.npmjs.com/package/rebasta)
+[![npm](https://img.shields.io/npm/l/rebasta.svg?style=flat-square)](https://www.npmjs.com/package/rebasta)
 
 Duplication detection tool (copy-paste detector) for programming languages, support different type of programming languages like javascript, jsx, typescript, html, java, c, swift, php, go, python and [other 150 languages...](docs/FORMATS.md)
 
@@ -8,21 +8,21 @@ Duplication detection tool (copy-paste detector) for programming languages, supp
 ## Installation
 
 ```
-npm install -g basta
+npm install -g rebasta
 ```
-or 
+or
 
 ```
-yarn global add basta
+yarn global add rebasta
 ```
 
 ## Usage
 
 ```
-  Usage: basta [options] <path>
+  Usage: rebasta [options] <path>
 
-  Basta is clone detection tool (copy/paste detector), support 100+ programming languages. Developed by Andrey Kucherenko.
-  Example usage: basta -t 10 /path/to/code
+  Rebasta is clone detection tool (copy/paste detector), support 100+ programming languages. Developed by Andrey Kucherenko.
+  Example usage: rebasta -t 10 /path/to/code
 
 
   Options:
@@ -30,7 +30,7 @@ yarn global add basta
     -V, --version             output the version number
     -l, --min-lines [number]  min size of duplication in code lines (Default is 5)
     -t, --threshold [number]  threshold for duplication, in case duplications >= threshold basta will exit with error
-    -c, --config [string]     path to config file (Default is .basta.json in <path>)
+    -c, --config [string]     path to config file (Default is .rebasta.json in <path>)
     -e, --exclude [string]    glob pattern for files what should be excluded from duplication detection
     -r, --reporter [string]   reporter to use (Default is console)
     -o, --output [string]     reporter to use (Default is ./report/)
@@ -42,8 +42,8 @@ yarn global add basta
     -h, --help                output usage information
 ```
 
-If file `.basta.json` located in the root of project, values from the file will be used as defaults.
-`.basta.json` should be correct json file:
+If file `.rebasta.json` located in the root of project, values from the file will be used as defaults.
+`.rebasta.json` should be correct json file:
 ```json
 {
   "exclude": [
@@ -56,10 +56,6 @@ If file `.basta.json` located in the root of project, values from the file will 
   "silent": true
 }
 ```
-
-## TODO
-
-Basta tool is continuously improved, all plans are [here](TODO.md). Please feel free to add new feature requests.
 
 ## License
 

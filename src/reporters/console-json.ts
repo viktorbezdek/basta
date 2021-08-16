@@ -19,11 +19,6 @@ export class ConsoleJsonReporter implements IReporter {
         ...statistic.get(),
         clones: clones
           .get()
-          .filter(
-            i =>
-              !/.*(test|mock|types)s?\.ts/gi.test(i.first.id) &&
-              !/.*(test|mock|types)s?\.ts/gi.test(i.second.id)
-          ),
       },
       null,
       2

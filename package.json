@@ -1,21 +1,21 @@
 {
-  "name": "basta",
-  "version": "1.0.3",
-  "description": "Basta is clone detection tool (copy/paste detector), support 100+ programming languages. Developed by Andrey Kucherenko.\n Example use: basta -t 10 /path/to/code",
-  "main": "lib/index.js",
+  "name": "rebasta",
+  "description": "Rebasta is successor of Basta - clone detection tool (copy/paste detector), support 100+ programming languages. Developed by Andrey Kucherenko.\n Example use: basta -t 10 /path/to/code",
+  "version": "1.0.4",
+  "author": [
+    "Andrey Kucherenko <kucherenko.andrey@gmail.com>",
+    "Viktor Bezdek <viktor.bezdek@gmail.com>"
+  ],
   "bin": {
-    "basta": "./bin/basta"
+    "rebasta": "./bin/rebasta"
   },
-  "author": "Andrey Kucherenko <kucherenko.andrey@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "lint": "tslint 'src/**/*.ts'",
-    "lint:fix": "tslint 'src/**/*.ts' --fix",
-    "test": "mocha ./test/index.js --compilers ts:ts-node/register,tsx:ts-node/register",
-    "test:dev": "npm test -- --watch",
-    "build": "tsc --outDir lib -d",
-    "prepublish": "yarn build",
-    "wip": "ts-node ./src/cli.ts"
+  "dependencies": {
+    "cli-table2": "^0.2.0",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "fs-extra": "^4.0.1",
+    "glob-stream": "^6.1.0",
+    "pug": "^2.0.0-rc.3"
   },
   "devDependencies": {
     "@types/chai": "^3.5.2",
@@ -31,22 +31,25 @@
     "chai": "^3.5.0",
     "chai-subset": "^1.5.0",
     "del": "^2.2.2",
-    "glob": "^7.1.2",
+    "glob": "^7.1.7",
     "mocha": "^3.4.1",
     "proxyquire": "^1.8.0",
-    "shelljs": "^0.7.8",
+    "shelljs": "^0.8.4",
     "sinon": "^2.3.1",
     "sinon-chai": "^2.10.0",
     "ts-node": "^3.0.4",
     "tslint": "^5.4.3",
     "typescript": "^2.6.1"
   },
-  "dependencies": {
-    "cli-table2": "^0.2.0",
-    "colors": "^1.1.2",
-    "commander": "^2.9.0",
-    "fs-extra": "^4.0.1",
-    "glob-stream": "^6.1.0",
-    "pug": "^2.0.0-rc.3"
+  "license": "MIT",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc --outDir lib -d",
+    "lint": "tslint 'src/**/*.ts'",
+    "lint:fix": "tslint 'src/**/*.ts' --fix",
+    "prepublish": "yarn build",
+    "test": "mocha ./test/index.js --compilers ts:ts-node/register,tsx:ts-node/register",
+    "test:dev": "npm test -- --watch",
+    "wip": "ts-node ./src/cli.ts"
   }
 }

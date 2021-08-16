@@ -13,7 +13,7 @@ export class HtmlReporter implements IReporter {
         const reportFunction = compileFile(__dirname + '/../../html/report.pug');
         const html = reportFunction({...statistic.get(), clones: clones.get()});
         ensureDirSync(options.output);
-        writeFileSync(resolve(options.output, 'basta-report.html'), html);
-        console.log(`HTML report saved to ${resolve(options.output, 'basta-report.html')}`.green);
+        writeFileSync(resolve(options.output, 'rebasta-report.html'), html);
+        console.log(`HTML report saved to ${resolve(options.output, 'rebasta-report.html')}`.green);
     }
 }
