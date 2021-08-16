@@ -14,15 +14,15 @@ const create = require('glob-stream');
 const Table = require("cli-table2");
 
 export function basta(options: IOptions) {
-    console.time('Working Time'.grey);
+    // console.time('Working Time'.grey);
 
     const paths = [`${options.path}/**/*`];
 
-    const ignores = options.exclude.map(pattern => `!${options.path}/${pattern}`);
+    const ignores = options.exclude.map(pattern => `!${pattern}`);
 
     const stream = create([...paths, ...ignores]);
 
-    console.log(require(__dirname + '/../package.json').description.grey + '\n\n');
+    // console.log(require(__dirname + '/../package.json').description.grey + '\n\n');
 
     if (options.debug) {
         console.log('Options:'.bold);
@@ -91,7 +91,7 @@ export function basta(options: IOptions) {
                     console.warn(`Reporter named "${reporter}" not registered`.yellow);
                 }
             });
-            console.timeEnd('Working Time'.grey);
+            // console.timeEnd('Working Time'.grey);
             const rate = statistic.get().rate;
             if (options.threshold && options.threshold <= rate) {
                 console.error(`Error: duplication rate(${rate}%) less then threshold(${options.threshold}%)`.bold.red);

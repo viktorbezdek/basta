@@ -29,6 +29,7 @@ function prepareOptions(cli: Command): IOptions {
 
     if (cli['exclude']) {
         argsConfig.exclude = cli.exclude.split(',');
+        console.log(argsConfig.exclude)
     }
 
     if (cli.args[0]) {
