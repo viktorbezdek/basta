@@ -1,5 +1,6 @@
 import {IReporter} from "./reporter.interface";
 import {ConsoleReporter} from "./console";
+import {ConsoleJsonReporter} from "./console-json";
 import {HtmlReporter} from "./html";
 
 export interface IReporters {
@@ -25,4 +26,5 @@ export function hasReporter(name: string): boolean {
 }
 
 registerReporter('html', new HtmlReporter());
+registerReporter('console-json', new ConsoleJsonReporter());
 registerReporter('console', new ConsoleReporter());
